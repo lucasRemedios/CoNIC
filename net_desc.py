@@ -8,7 +8,7 @@ import torch.nn as nn
 from torchvision.models.resnet import Bottleneck as ResNetBottleneck
 from torchvision.models.resnet import ResNet
 
-sys.path.append("../../tiatoolbox")
+#sys.path.append("../../tiatoolbox")
 
 from tiatoolbox.models.abc import ModelABC
 from tiatoolbox.models.architecture.hovernet import HoVerNet as TIAHoVerNet
@@ -218,7 +218,7 @@ class HoVerNetConic(ModelABC):
     @staticmethod
     def _get_instance_info(pred_inst, pred_type=None):
         #return tiahovernet._get_instance_info(pred_inst, pred_type)
-        return tiahovernet.get_instance_info(pred_inst, pred_type)
+        return TIAHoVerNet.get_instance_info(pred_inst, pred_type)
 
     @staticmethod
     # skipcq: PYL-W0221
